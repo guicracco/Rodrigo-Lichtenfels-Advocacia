@@ -6,9 +6,30 @@
     <title>Rodrigo Lichtenfels | Revisão de Juros Abusivos e Dívidas Bancárias</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Preload da Imagem LCP (Se for o Dr. Rodrigo no Desktop) -->
+    <link rel="preload" as="image" href="rodrigo.jpg.jpeg">
+
+    <!-- CSS Crítico: Renderização instantânea do que está "above the fold" -->
+    <style>
+        :root { --bg-deep: #050a12; --gold: #c5a059; --text: #e2e8f0; --text-muted: #94a3b8; --whatsapp: #128c7e; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        body { background: var(--bg-deep); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1100px; margin: auto; padding: 0 20px; }
+        #navbar { padding: 20px 0; background: rgba(5, 10, 18, 0.95); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(197, 160, 89, 0.2); }
+        .hero { padding: 100px 0; text-align: center; min-height: 400px; }
+        h1 { font-size: 3rem; font-weight: 700; margin-bottom: 20px; line-height: 1.2; }
+        .highlight { color: var(--gold); }
+        .badge { color: var(--gold); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; display: block; }
+    </style>
+
+    <!-- Carregamento Assíncrono para o restante do CSS -->
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789%20%C3%A1%C3%A0%C3%A2%C3%A3%C3%A9%C3%AA%C3%AD%C3%B3%C3%B4%C3%B5%C3%BA%C3%A7" rel="stylesheet">
+    <noscript>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </noscript>
 </head>
 <body>
 
@@ -23,7 +44,7 @@
         <div class="container">
             <span class="badge">Direito Bancário e do Consumidor</span>
             <h1>Sua dívida tornou-se <span class="highlight">insustentável?</span></h1>
-            <p>Muitas vezes o saldo devedor não baixa porque os juros aplicados estão acima da média de mercado. Nós realizamos a análise técnica do seu contrato para identificar abusividades e buscar o equilíbrio financeiro.</p>
+            <p> vezes o saldo devedor não baixa porque os juros aplicados estão acima da média de mercado. Nós realizamos a análise técnica do seu contrato para identificar abusividades e buscar o equilíbrio financeiro.</p>
             
             <div class="pain-points">
                 <span><i class="fas fa-exclamation-triangle"></i> Juros sobre juros</span>
@@ -61,7 +82,7 @@
         <div class="container lawyer-grid">
             <div class="lawyer-photo">
                 <div class="photo-placeholder">
-                    <img src="rodrigo.jpg.jpeg" alt="Dr. Rodrigo Lichtenfels" loading="lazy" decoding="async">
+                    <img src="rodrigo.jpg.jpeg" alt="Dr. Rodrigo Lichtenfels" fetchpriority="high" decoding="async" width="400" height="400">
                     <div class="photo-border"></div>
                 </div>
             </div>
