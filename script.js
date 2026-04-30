@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- Configurações WhatsApp ---
-    const WHATSAPP_NUM = "5541999999999"; // Coloque o número aqui
+    const WHATSAPP_NUM = "5541996942720"; // Coloque o número aqui
     const MESSAGE = "Olá Dr. Rodrigo, gostaria de solicitar uma análise técnica do meu contrato bancário para verificar juros abusivos.";
 
     // Seleciona links específicos e botões de CTA (como o "Consultar Especialista" e botões principais)
