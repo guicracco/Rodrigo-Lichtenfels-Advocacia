@@ -7,6 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.whatsapp-link, .cta-main, .cta-footer, .btn-nav').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
+
+            // Dispara o evento de conversão para o Meta Pixel
+            if (typeof fbq === 'function') {
+                fbq('track', 'Contact');
+            }
+
             const url = `https://wa.me/${WHATSAPP_NUM}?text=${encodeURIComponent(MESSAGE)}`;
             window.open(url, '_blank');
         });
